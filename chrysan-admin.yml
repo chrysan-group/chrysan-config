@@ -1,0 +1,30 @@
+spring:
+  boot:
+    admin:
+#      discovery:
+#        ignored-services: "chrysan*"
+      notify:
+        mail:
+          to: wangxuekai@chinacloud.com.cn
+          from: wangxuekai@chinacloud.com.cn
+          ignore-changes: "*:UP"
+      ui: # http://codecentric.github.io/spring-boot-admin/current/#customizing-external-views
+        external-views:
+          - label: "🚀"
+            url: http://codecentric.de
+            order: 2000
+  mail:
+    host: smtpw.263.net
+    username: wangxuekai@chinacloud.com.cn
+#    开启IMAP/SMTP服务颁发的授权码
+    password: SPEEDER1234QWERqwer
+    port: 465
+    properties:
+      mail.debug: false
+      #安全认证(默认是true)
+      mail.smtp.auth: true
+      #465或587
+      mail.smtp.port: 465
+      #开启ssl加密 否则项目启动时报530error
+      mail.smtp.ssl.enable: true
+      mail.smtp.ssl.socketFactory: sf
